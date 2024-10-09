@@ -6,7 +6,7 @@ services:
   - type: web
     name: my-portofolio
     runtime: static # Assuming the portfolio is a static website
-    repo: https://github.com/mu534/my-portofolio.git # Correct repo URL format
+   repo: https://github.com/mu534/my-portofolio.git
     branch: main # Default branch for deployment
     staticPublishPath: ./dist # Change if your build outputs to a different directory
     buildCommand: npm install && npm run build # Adjust if your project uses a different build tool
