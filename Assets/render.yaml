@@ -14,8 +14,9 @@ services:
     repo: repo: https://github.com/mu534/my-portofolio.git
  # Repo containing render.yaml
     branch: main # Default branch for deployment
-    staticPublishPath: my-portofolio. # Change if your build outputs to a different directory
-    buildCommand: npm install && npm run build # Adjust if your project uses a different build tool
+    staticPublishPath: ./build # Adjust this path if necessary
+   buildCommand: npm install && npm run build # Adjust if needed
+    autoDeploy: true
     startCommand: npm start # Adjust if necessary
     autoDeploy: true # Automatically deploy new changes to the main branch
     maxShutdownDelaySeconds: 120 # Increase graceful shutdown period. Default: 30, Max: 300
@@ -29,3 +30,6 @@ services:
       - www.myportfolio.com
 
 # Optionally, you can add more services, databases, or other components.
+ 
+
+  
