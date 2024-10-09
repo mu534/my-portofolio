@@ -14,7 +14,7 @@ services:
     repo: repo: https://github.com/mu534/my-portofolio.git
  # Repo containing render.yaml
     branch: main # Default branch for deployment
-    staticPublishPath: ./build # Adjust this path if necessary
+    staticPublishPath: ./dist # Adjust this path if necessary
    buildCommand: npm install && npm run build # Adjust if needed
     autoDeploy: true
     startCommand: npm start # Adjust if necessary
@@ -32,4 +32,5 @@ services:
 # Optionally, you can add more services, databases, or other components.
  
 
-  
+
+
