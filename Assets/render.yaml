@@ -1,8 +1,3 @@
-#################################################################
-# Example render.yaml                                           #
-# Do not use this file directly! Consult it for reference only. #
-#################################################################
-
 previews:
   generation: automatic # Enable preview environments
 
@@ -11,12 +6,10 @@ services:
   - type: web
     name: my-portofolio
     runtime: static # Assuming the portfolio is a static website
-    repo: repo: https://github.com/mu534/my-portofolio.git
- # Repo containing render.yaml
+    repo: https://github.com/mu534/my-portofolio.git # Correct repo URL format
     branch: main # Default branch for deployment
-    staticPublishPath: ./dist # Adjust this path if necessary
-   buildCommand: npm install && npm run build # Adjust if needed
-    autoDeploy: true
+    staticPublishPath: ./dist # Change if your build outputs to a different directory
+    buildCommand: npm install && npm run build # Adjust if your project uses a different build tool
     startCommand: npm start # Adjust if necessary
     autoDeploy: true # Automatically deploy new changes to the main branch
     maxShutdownDelaySeconds: 120 # Increase graceful shutdown period. Default: 30, Max: 300
@@ -28,9 +21,3 @@ services:
     domains: # Custom domains (optional)
       - myportfolio.com
       - www.myportfolio.com
-
-# Optionally, you can add more services, databases, or other components.
- 
-
-
-
